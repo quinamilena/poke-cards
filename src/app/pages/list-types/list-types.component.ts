@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 
 import { ListTypesService } from './services/list-types.service';
 import { IType } from './models/IType';
-import { separate } from 'src/assets/util/separate';
 import { Router } from '@angular/router';
 
 @Component({
@@ -11,7 +10,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./list-types.component.scss'],
 })
 export class ListTypesComponent implements OnInit {
-  types: Array<Array<IType>> = [];
+  types: Array<IType> = [];
 
   constructor(private service: ListTypesService, private router: Router) {}
 
@@ -20,9 +19,7 @@ export class ListTypesComponent implements OnInit {
   }
 
   async start(): Promise<void> {
-    const data = await this.service.listTypes();
-
-    this.types = separate(data, 2);
+    this.types = await this.service.listTypes();
   }
 
   goToType(type: string): void {

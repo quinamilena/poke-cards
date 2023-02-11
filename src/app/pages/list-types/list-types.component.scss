@@ -1,86 +1,59 @@
-.pt-initial {
-  position: initial;
+ion-grid {
+  width: 50%;
+  min-height: 100vh;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-.w-180 {
-  width: 180px;
+ion-card {
+  border: 1px solid var(--ion-color-primary);
+  --background: #ffffff;
+  box-shadow: none;
+  border-radius: 12px;
 }
 
-.h-180 {
-  height: 180px;
+.d-flex {
+  display: flex;
 }
 
-.content-shadow {
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
-    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+.jc-center {
+  justify-content: center;
 }
 
-.card {
-  background: var(--ion-color-light) !important;
+.w-160 {
+  width: 160px;
 }
 
-.text-center {
-  text-align: center;
+.mt-10 {
+  margin-top: 10px;
 }
 
-.float-right {
-  float: right;
+.mb-10 {
+  margin-bottom: 10px;
 }
 
-.bd-radius {
-  border-radius: 20px;
+.box-s-img {
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
 
-.bd-top {
-  border-bottom: 5px solid;
+.b-radius-50 {
+  border-radius: 50%;
 }
 
-.Colorless {
-  border-color: var(--Colorless);
+ion-button {
+  --color: var(--ion-color-light);
+
+  --box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
 
-.Darkness {
-  border-color: var(--Darkness);
+@media screen and (max-width: 992px) {
+  ion-grid {
+    width: 100%;
+  }
 }
 
-.Dragon {
-  border-color: var(--Dragon);
-}
-
-.Fairy {
-  border-color: var(--Fairy);
-}
-
-.Fighting {
-  border-color: var(--Fighting);
-}
-
-.Fire {
-  border-color: var(--Fire);
-}
-
-.Grass {
-  border-color: var(--Grass);
-}
-
-.Lightning {
-  border-color: var(--Lightning);
-}
-
-.Metal {
-  border-color: var(--Metal);
-}
-
-.Psychic {
-  border-color: var(--Psychic);
-}
-
-.Water {
-  border-color: var(--Water);
-}
-
-.img-types {
-  width: 100px;
-  margin: 0.5rem 2rem;
-  filter: drop-shadow(-4px 1px 6px var(--ion-color-primary-contrast));
+@media screen and (max-width: 600px) {
+  ion-grid {
+    width: 100%;
+  }
 }

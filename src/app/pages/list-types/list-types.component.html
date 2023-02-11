@@ -5,22 +5,31 @@
 </ion-header>
 
 <ion-content>
-  <ion-grid>
-    <ion-row *ngFor="let list of types">
-      <ion-col size="6" *ngFor="let type of list">
-        <ion-card class="card content-shadow bd-radius bd-top {{ type.name }}">
-          <div>
-            <img class="img-types" [alt]="type.name" [src]="type.img" />
+  <ion-grid class="ion-align-items-center">
+    <ion-row>
+      <ion-col size-lg="4" size-md="4" size-sm="6" *ngFor="let type of types">
+        <ion-card>
+          <div class="d-flex jc-center mt-10">
+            <img
+              class="w-160 b-radius-50 box-s-img"
+              [alt]="type.name"
+              [src]="type.img"
+            />
           </div>
 
-          <ion-button
-            fill="clear"
-            class="float-right"
-            (click)="goToType(type.name)"
-          >
-            {{ type.name }}
-            <ion-icon name="chevron-forward-outline"></ion-icon>
-          </ion-button>
+          <div class="d-flex jc-center mt-10">
+            <ion-text color="primary">
+              <h3>
+                {{ type.name }}
+              </h3>
+            </ion-text>
+          </div>
+
+          <div class="d-flex jc-center mt-10 mb-10">
+            <ion-button shape="round" (click)="goToType(type.name)">
+              View More <ion-icon name="add-outline"></ion-icon>
+            </ion-button>
+          </div>
         </ion-card>
       </ion-col>
     </ion-row>
