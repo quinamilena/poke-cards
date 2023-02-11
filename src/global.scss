@@ -1,0 +1,227 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import '~@ionic/angular/css/core.css';
+
+/* Basic CSS for apps built with Ionic */
+@import '~@ionic/angular/css/normalize.css';
+@import '~@ionic/angular/css/structure.css';
+@import '~@ionic/angular/css/typography.css';
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import '~@ionic/angular/css/padding.css';
+@import '~@ionic/angular/css/float-elements.css';
+@import '~@ionic/angular/css/text-alignment.css';
+@import '~@ionic/angular/css/text-transformation.css';
+@import '~@ionic/angular/css/flex-utils.css';
+
+:root {
+  --Colorless: rgb(156, 141, 120);
+  --Darkness: rgb(41, 90, 106);
+  --Dragon: rgb(245, 169, 19);
+  --Fairy: rgb(254, 168, 213);
+  --Fighting: rgb(190, 75, 30);
+  --Fire: rgb(251, 3, 1);
+  --Grass: rgb(6, 165, 2);
+  --Lightning: rgb(255, 255, 1);
+  --Metal: rgb(192, 192, 192);
+  --Psychic: rgb(183, 0, 185);
+  --Water: rgb(78, 81, 245);
+}
+
+@media (prefers-color-scheme: dark) {
+  /*
+   * Dark Colors
+   * -------------------------------------------
+   */
+
+  body {
+    --ion-color-primary: #8685ef;
+    --ion-color-primary-rgb: 0, 201, 167;
+    --ion-color-primary-contrast: #000000;
+    --ion-color-primary-contrast-rgb: 0, 0, 0;
+    --ion-color-primary-shade: #00b193;
+    --ion-color-primary-tint: #1aceb0;
+
+    --ion-color-secondary: #66d79b;
+    --ion-color-secondary-rgb: 102, 215, 155;
+    --ion-color-secondary-contrast: #000000;
+    --ion-color-secondary-contrast-rgb: 0, 0, 0;
+    --ion-color-secondary-shade: #5abd88;
+    --ion-color-secondary-tint: #75dba5;
+
+    --ion-color-tertiary: #9ce492;
+    --ion-color-tertiary-rgb: 156, 228, 146;
+    --ion-color-tertiary-contrast: #000000;
+    --ion-color-tertiary-contrast-rgb: 0, 0, 0;
+    --ion-color-tertiary-shade: #89c980;
+    --ion-color-tertiary-tint: #a6e79d;
+
+    --ion-color-success: #2dd36f;
+    --ion-color-success-rgb: 45, 211, 111;
+    --ion-color-success-contrast: #000000;
+    --ion-color-success-contrast-rgb: 0, 0, 0;
+    --ion-color-success-shade: #28ba62;
+    --ion-color-success-tint: #42d77d;
+
+    --ion-color-warning: #ffc409;
+    --ion-color-warning-rgb: 255, 196, 9;
+    --ion-color-warning-contrast: #000000;
+    --ion-color-warning-contrast-rgb: 0, 0, 0;
+    --ion-color-warning-shade: #e0ac08;
+    --ion-color-warning-tint: #ffca22;
+
+    --ion-color-danger: #eb445a;
+    --ion-color-danger-rgb: 235, 68, 90;
+    --ion-color-danger-contrast: #ffffff;
+    --ion-color-danger-contrast-rgb: 255, 255, 255;
+    --ion-color-danger-shade: #cf3c4f;
+    --ion-color-danger-tint: #ed576b;
+
+    --ion-color-medium: #a0acbd;
+    --ion-color-medium-rgb: 160, 172, 189;
+    --ion-color-medium-contrast: #000000;
+    --ion-color-medium-contrast-rgb: 0, 0, 0;
+    --ion-color-medium-shade: #8d97a6;
+    --ion-color-medium-tint: #aab4c4;
+
+    --ion-color-light: #ffffff;
+    --ion-color-light-rgb: 255, 255, 255;
+    --ion-color-light-contrast: #000000;
+    --ion-color-light-contrast-rgb: 0, 0, 0;
+    --ion-color-light-shade: #e0e0e0;
+    --ion-color-light-tint: #ffffff;
+  }
+
+  /*
+   * iOS Dark Theme
+   * -------------------------------------------
+   */
+
+  .ios body {
+    --ion-background-color: #ffffff;
+    --ion-background-color-rgb: 255, 255, 255;
+
+    --ion-text-color: #8685ef;
+    --ion-text-color-rgb: 0, 201, 167;
+
+    --ion-color-step-50: #f2fcfb;
+    --ion-color-step-100: #e6faf6;
+    --ion-color-step-150: #d9f7f2;
+    --ion-color-step-200: #ccf4ed;
+    --ion-color-step-250: #bff2e9;
+    --ion-color-step-300: #b3efe5;
+    --ion-color-step-350: #a6ece0;
+    --ion-color-step-400: #99e9dc;
+    --ion-color-step-450: #8ce7d7;
+    --ion-color-step-500: #80e4d3;
+    --ion-color-step-550: #73e1cf;
+    --ion-color-step-600: #66dfca;
+    --ion-color-step-650: #59dcc6;
+    --ion-color-step-700: #4dd9c1;
+    --ion-color-step-750: #40d7bd;
+    --ion-color-step-800: #33d4b9;
+    --ion-color-step-850: #26d1b4;
+    --ion-color-step-900: #19ceb0;
+    --ion-color-step-950: #0dccab;
+
+    --ion-toolbar-background: #0d0d0d;
+
+    --ion-item-background: #1c1c1c;
+    --ion-item-background-activated: #313131;
+  }
+
+  /*
+   * Material Design Dark Theme
+   * -------------------------------------------
+   */
+
+  .md body {
+    --ion-background-color: #ffffff;
+    --ion-background-color-rgb: 255, 255, 255;
+
+    --ion-text-color: #8685ef;
+    --ion-text-color-rgb: 0, 201, 167;
+
+    --ion-color-step-50: #f2fcfb;
+    --ion-color-step-100: #e6faf6;
+    --ion-color-step-150: #d9f7f2;
+    --ion-color-step-200: #ccf4ed;
+    --ion-color-step-250: #bff2e9;
+    --ion-color-step-300: #b3efe5;
+    --ion-color-step-350: #a6ece0;
+    --ion-color-step-400: #99e9dc;
+    --ion-color-step-450: #8ce7d7;
+    --ion-color-step-500: #80e4d3;
+    --ion-color-step-550: #73e1cf;
+    --ion-color-step-600: #66dfca;
+    --ion-color-step-650: #59dcc6;
+    --ion-color-step-700: #4dd9c1;
+    --ion-color-step-750: #40d7bd;
+    --ion-color-step-800: #33d4b9;
+    --ion-color-step-850: #26d1b4;
+    --ion-color-step-900: #19ceb0;
+    --ion-color-step-950: #0dccab;
+
+    --ion-item-background: #8685ef;
+  }
+}
+@font-face {
+  font-family: 'Josefin Sans', sans-serif;
+  src: url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap');
+}
+
+ion-title.title-large {
+  --color: #8685ef;
+}
+
+ion-toolbar {
+  --ion-toolbar-background: transparent !important;
+  --ion-toolbar-text-color: var(--ion-color-secondary) !important;
+  text-align: center;
+}
+
+ion-grid {
+  background-image: linear-gradient(
+    to top,
+    #8685ef,
+    #a8a2f4,
+    #c7c0f8,
+    #e3dffc,
+    #ffffff
+  );
+}
+
+ion-content,
+ion-header,
+ion-title {
+  font-family: 'Josefin Sans', sans-serif !important;
+}
+
+ion-title {
+  font-size: 1.3rem !important;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+ion-item {
+  background: var(--ion-color-tertiary) !important;
+}
+
+.tt-none {
+  text-transform: none;
+}
+
+.ta-left {
+  text-align: left !important;
+}

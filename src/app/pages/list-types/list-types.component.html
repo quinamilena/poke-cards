@@ -1,0 +1,28 @@
+<ion-header class="pt-initial">
+  <ion-toolbar translucent class="ta-left">
+    <ion-title class="tt-none">Cards by types</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row *ngFor="let list of types">
+      <ion-col size="6" *ngFor="let type of list">
+        <ion-card class="card content-shadow bd-radius bd-top {{ type.name }}">
+          <div>
+            <img class="img-types" [alt]="type.name" [src]="type.img" />
+          </div>
+
+          <ion-button
+            fill="clear"
+            class="float-right"
+            (click)="goToType(type.name)"
+          >
+            {{ type.name }}
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </ion-button>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

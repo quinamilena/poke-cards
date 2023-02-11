@@ -1,0 +1,86 @@
+.pt-initial {
+  position: initial;
+}
+
+.w-180 {
+  width: 180px;
+}
+
+.h-180 {
+  height: 180px;
+}
+
+.content-shadow {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.card {
+  background: var(--ion-color-light) !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.float-right {
+  float: right;
+}
+
+.bd-radius {
+  border-radius: 20px;
+}
+
+.bd-top {
+  border-bottom: 5px solid;
+}
+
+.Colorless {
+  border-color: var(--Colorless);
+}
+
+.Darkness {
+  border-color: var(--Darkness);
+}
+
+.Dragon {
+  border-color: var(--Dragon);
+}
+
+.Fairy {
+  border-color: var(--Fairy);
+}
+
+.Fighting {
+  border-color: var(--Fighting);
+}
+
+.Fire {
+  border-color: var(--Fire);
+}
+
+.Grass {
+  border-color: var(--Grass);
+}
+
+.Lightning {
+  border-color: var(--Lightning);
+}
+
+.Metal {
+  border-color: var(--Metal);
+}
+
+.Psychic {
+  border-color: var(--Psychic);
+}
+
+.Water {
+  border-color: var(--Water);
+}
+
+.img-types {
+  width: 100px;
+  margin: 0.5rem 2rem;
+  filter: drop-shadow(-4px 1px 6px var(--ion-color-primary-contrast));
+}
