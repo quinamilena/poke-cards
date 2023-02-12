@@ -29,4 +29,25 @@ export class ListSearchComponent implements OnInit {
   async getCards(): Promise<void> {
     this.infoPage = await this.service.getCardByTypes(this.type);
   }
+
+  async onIonInfinite(ev: any) {
+    if (this.infoPage.data.length > this.infoPage.totalCount) {
+      ev.target.complete();
+
+      return;
+    }
+
+    const newPage = await this.service.getCardByTypes(
+      this.type,
+      'name',
+      10,
+      this.infoPage.page + 1
+    );
+
+    const oldData = this.infoPage.data;
+    newPage.data = [...oldData, ...newPage.data];
+    this.infoPage = newPage;
+
+    ev.target.complete();
+  }
 }

@@ -18,7 +18,7 @@ export class ListSearchService {
     type: string,
     orderBy: string = 'name',
     pageSize: number = 10,
-    page: number = 3
+    page: number = 1
   ): Promise<IPage> {
     return new Promise((result, reject) => {
       try {
