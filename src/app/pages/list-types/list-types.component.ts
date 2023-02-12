@@ -11,12 +11,15 @@ import { Router } from '@angular/router';
 })
 export class ListTypesComponent implements OnInit {
   types: Array<IType> = [];
+  docRead: boolean = false;
 
-  constructor(private service: ListTypesService, private router: Router) {}
-
-  async ngOnInit(): Promise<void> {
-    this.start();
+  constructor(private service: ListTypesService, private router: Router) {
+    this.start().then(() => {
+      this.docRead = true;
+    });
   }
+
+  async ngOnInit(): Promise<void> {}
 
   async start(): Promise<void> {
     this.types = await this.service.listTypes();

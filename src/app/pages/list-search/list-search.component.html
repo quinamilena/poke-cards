@@ -1,5 +1,55 @@
 <ion-header class="pt-initial">
-  <ion-toolbar translucent class="ta-left">
-    <ion-title class="tt-none">Search types </ion-title>
-  </ion-toolbar>
+  <ion-progress-bar *ngIf="!docRead" type="indeterminate"></ion-progress-bar>
 </ion-header>
+
+<ion-content>
+  <ion-grid class="ion-align-items-center">
+    <ion-row class="ml-5">
+      <ion-col size="12">
+        <ion-text color="primary">
+          <h1>
+            <b> Search for a card by {{ type }} </b>
+          </h1>
+        </ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col
+        size-lg="4"
+        size-md="4"
+        size-sm="6"
+        *ngFor="let card of infoPage.data"
+      >
+        <ion-card>
+          <div class="d-flex jc-center mt-10">
+            <img
+              class="w-160 box-s-img"
+              [alt]="card.name"
+              [src]="card.images.large"
+            />
+          </div>
+
+          <div class="d-flex fd-column mt-10">
+            <ion-text color="primary" class="ta-center m-0-auto">
+              <h3>
+                {{ card.name }}
+              </h3>
+            </ion-text>
+
+            <ion-text color="secondary" class="ta-center m-0-auto">
+              <p class="m-0">
+                {{ card.set.series }}
+              </p>
+            </ion-text>
+          </div>
+
+          <div class="d-flex jc-center mt-10 mb-10">
+            <ion-button shape="round">
+              View More <ion-icon name="add-outline"></ion-icon>
+            </ion-button>
+          </div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
