@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ card.name }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button
+        id="btn-close"
+        shape="round"
+        fill="outline"
+        (click)="closeCard()"
+        ><ion-icon name="close-outline"></ion-icon
+      ></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div>
+    <img
+      class="d-block margin-0-auto width-300 b-shadow-img"
+      [src]="card.images.large"
+      [alt]="card.name"
+    />
+
+    <h1>{{ card.name }}</h1>
+  </div>
+</ion-content>

@@ -3,6 +3,8 @@ import { ActivatedRoute } from '@angular/router';
 import { ICards } from '../../../assets/models/ICards';
 import { IPage } from '../../../assets/models/IPage';
 import { ListSearchService } from './services/list-search.service';
+import { ModalController } from '@ionic/angular';
+import { CardOneComponent } from './components/card-one/card-one.component';
 
 @Component({
   selector: 'app-list-search',
@@ -17,7 +19,8 @@ export class ListSearchComponent implements OnInit {
 
   constructor(
     private activateRoute: ActivatedRoute,
-    private service: ListSearchService
+    private service: ListSearchService,
+    private modalCtrl: ModalController
   ) {
     const params = this.activateRoute.snapshot.params;
     this.type = String(params['term']).split(':')[1];
@@ -49,5 +52,21 @@ export class ListSearchComponent implements OnInit {
     this.infoPage = newPage;
 
     ev.target.complete();
+  }
+
+  async openModal(id: string) {
+    const modal = await this.modalCtrl.create({
+      component: CardOneComponent,
+      componentProps: {
+        id,
+      },
+    });
+    modal.present();
+
+    const { data, role } = await modal.onWillDismiss();
+
+    if (role === 'confirm') {
+      console.log(`Hello, ${data}!`);
+    }
   }
 }
